@@ -1,0 +1,49 @@
+number of gpu   :      1
+sequence length :      4
+train batch size:      4
+valid batch size:      4
+optimizer choice:      1
+multiple optim  :      1
+num of epochs   :      1
+num of workers  :      0
+test crop type  :      1
+whether to flip :      0
+learning rate   : 0.0010
+momentum for sgd: 0.9000
+weight decay    : 0.0000
+dampening       : 0.0000
+use nesterov    :      0
+method for sgd  :      1
+step for sgd    :      5
+gamma for sgd   : 0.1000
+save dir        : checkpoints_phase
+use pretrained  : False
+train_paths  :  71000
+train_labels :  71000
+valid_paths  :  15304
+valid_labels :  15304
+test_paths   :  98194
+test_labels  :  98194
+num of train dataset:  71000
+num train start idx :  70904
+last idx train start:  70996
+num of train we use :  70904
+num of all train use: 283616
+num of valid dataset:  15304
+num valid start idx :  15280
+last idx valid start:  15300
+num of valid we use :  15280
+num of all valid use:  61120
+epoch 0 train batch 0/70904
+Traceback (most recent call last):
+  File "train_singlenet_phase.py", line 589, in <module>
+    main()
+  File "train_singlenet_phase.py", line 585, in main
+    train_model(train_dataset, train_num_each, val_dataset, val_num_each)
+  File "train_singlenet_phase.py", line 436, in train_model
+    loss.backward()
+  File "/home/ahallur1/miniconda3/envs/mtrcnet_phase/lib/python3.7/site-packages/torch/tensor.py", line 118, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/ahallur1/miniconda3/envs/mtrcnet_phase/lib/python3.7/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA error: CUBLAS_STATUS_EXECUTION_FAILED when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`
