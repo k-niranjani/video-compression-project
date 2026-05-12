@@ -1,4 +1,4 @@
-# TeCNO Cholec80 Compression Robustness
+# TeCNO Cholec80 
 
 This folder contains the TeCNO-based surgical phase recognition pipeline used for evaluating the effect of video compression on the Cholec80 dataset.
 
@@ -9,7 +9,6 @@ The goal of this experiment is to test how TeCNO performs when trained and teste
 The compression levels used are:
 
 - Original
-- CRF18
 - CRF23
 - CRF28
 - CRF35
@@ -53,18 +52,3 @@ These scripts train and test the TeCNO temporal model using the exported feature
 - `make_tecno_plots.py`
 
 This script generates the result plots and heatmaps for cross-compression evaluation.
-
-## Main Modifications
-
-Compared to the original TeCNO codebase, this version adds:
-
-- 1 fps preprocessing for Cholec80 videos
-- Pretrained ResNet50 feature extraction
-- Cross-compression feature export
-- Stage 2 cross-compression testing
-- Automated batch testing script
-- Result plotting for accuracy and F1 score
-
-## Notes
-
-Generated folders such as `logs/`, `wandb/`, checkpoints, exported features, and raw video frames are not included in this repository.
