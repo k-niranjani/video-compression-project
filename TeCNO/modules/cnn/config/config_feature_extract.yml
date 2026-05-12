@@ -1,0 +1,25 @@
+module: cnn.feature_extraction.FeatureExtraction
+model: cnn.TwoHeadResNet50Model
+
+data_root: E:/VC/cholec80_processed_1fps/crf51
+dataset: cholec80_feature_extract.Cholec80FeatureExtract
+
+out_features: 7
+input_height: 224
+input_width: 224
+
+batch_size: 8
+fps_sampling: 1
+fps_sampling_test: 1
+learning_rate: 0.0005
+dataset_mode: img_multilabel
+early_stopping_metric: val_acc_phase
+pretrained: True
+save_top_k: 1
+max_epochs: 25
+min_epochs: 25
+num_tasks: 1
+num_sanity_val_steps: 4
+test_extract: True
+num_workers: 4
+gpus: 1

@@ -1,0 +1,26 @@
+model: two_head_resnet50_pretrained.TwoHeadResNet50Pretrained
+dataset: cholec80_feature_extract.Cholec80FeatureExtract
+module: cnn.feature_extraction.FeatureExtraction
+
+data_root: E:/VC/cholec80_processed_1fps/crf51
+
+out_features: 7
+num_tool_classes: 7
+
+input_height: 224
+input_width: 224
+
+batch_size: 8
+num_workers: 2
+max_epochs: 25
+min_epochs: 1
+learning_rate: 0.0005
+
+fps_sampling: 1.0
+fps_sampling_test: 1.0
+dataset_mode: img_multilabel
+test_extract: true
+num_tasks: 1
+
+dropout: 0.5
+freeze_until_layer4: true

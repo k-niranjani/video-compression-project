@@ -1,0 +1,29 @@
+module: mstcn.tecno.TeCNO
+model: mstcn.MultiStageModel
+dataset: cholec80.Cholec80
+
+data_root: E:/VC/cholec80_processed_1fps/videos/stage2_features
+out_features: 7
+num_workers: 0
+batch_size: 1
+
+features_per_seconds: 1
+features_subsampling: 1
+
+log_every_n_steps: 1
+mstcn_causal_conv: True
+learning_rate: 0.00007
+
+min_epochs: 25
+max_epochs: 25
+
+mstcn_layers: 8
+mstcn_f_maps: 32
+mstcn_f_dim: 2048
+mstcn_stages: 2
+
+early_stopping_metric: val_acc
+save_top_k: 1
+gpus: [0]
+num_sanity_val_steps: 0
+output_path: E:/VC/cholec80_processed_1fps/videos/tecno_logs

@@ -1,0 +1,21 @@
+module: mstcn.tecno.TemporalModule
+model: mstcn.MultiStageModel
+dataset: cholec80.Cholec80
+
+data_root: D:/VC/toy/processed/stage2_features
+out_features: 7
+
+batch_size: 1
+num_workers: 0
+
+learning_rate: 0.0005
+max_epochs: 5
+min_epochs: 1
+
+features_per_seconds: 5
+fps_sampling: 5
+fps_sampling_test: 5
+
+save_top_k: 1
+num_sanity_val_steps: 0
+gpus: 1
